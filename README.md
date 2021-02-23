@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Learning Resource
+[Understanding TypeScript – 2020 Edition](https://learning.oreilly.com/videos/understanding-typescript/9781789951905)
+
 ## Available Scripts
 
 In the project directory, you can run:
