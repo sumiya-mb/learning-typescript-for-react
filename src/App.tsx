@@ -8,7 +8,10 @@ const App: React.FC = () => {
 
   const todoAddHandler = (text: string) => {
     const randomizeId = Math.random().toString()
-    setTodos([{id: randomizeId, text: text}])
+    setTodos(prevTodos => [
+      ...prevTodos,
+      {id: randomizeId, text: text}
+    ])
   }
 
   return (
