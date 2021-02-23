@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface todoListProps {
+interface TodoListProps {
   todos: { id: string, text: string }[]
 }
 
-const TodoList: React.FC<todoListProps> = ({todos}) => {
+const TodoList: React.FC<TodoListProps> = ({todos}) => {
 
   return (
     <ul>
