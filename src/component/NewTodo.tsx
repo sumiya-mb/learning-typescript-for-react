@@ -1,4 +1,5 @@
 import React, {useRef} from 'react';
+import {Button, Form} from "react-bootstrap";
 
 interface NewTodoProps {
   onAddTodo: (todoText: string) => void
@@ -12,13 +13,16 @@ const NewTodo: React.FC<NewTodoProps> = ({onAddTodo}) => {
     onAddTodo(enteredText)
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="todo-text">Todo Text</label>
-        <input type="text" id='todo-text' ref={textInputRef}/>
-      </div>
-      <button type='submit'>Add Todo</button>
-    </form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label htmlFor="todo-text">Todo Text</Form.Label>
+          <Form.Control type="text" placeholder="What's your todo?"  ref={textInputRef} />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Add Todo
+        </Button>
+      </Form>
   );
 };
 

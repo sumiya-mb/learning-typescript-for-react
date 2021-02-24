@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TodoList from "./component/TodoList";
 import NewTodo from "./component/NewTodo";
 import {Todo} from './todo.model'
+import {Container} from "react-bootstrap";
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -20,10 +21,10 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className='App'>
+    <Container>
       <NewTodo onAddTodo={todoAddHandler}/>
       <TodoList todos={todos} onDeleteTodo={todoDeleteHandler}/>
-    </div>
+    </Container>
   );
 };
 
